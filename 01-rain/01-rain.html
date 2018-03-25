@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body,div,h3,p,ul,li{
+            margin: 0;
+            padding: 0;
+        }
+        #warp{
+            width: 500px;
+            height: 600px;
+            margin-top: 20px;
+
+        }
+        ul{
+            list-style: none;
+            width: 300px;
+            height:400px;
+        }
+        li{
+            position: relative;
+            float:left;
+            width:50px;
+            height:50px;
+            margin-left: 25px;
+        }
+        li > img{
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+
+        }
+        li div{
+            display:none;
+            position:absolute;
+            top: 100px;
+            width: 274px;
+            height: 430px;
+
+        }
+        li:nth-child(2) div{
+            left: -75px;
+        }
+        li:nth-child(3) div{
+            left: -150px;
+        }
+        li:nth-child(4) div{
+            left: -225px;
+        }
+    </style>
+    <title>作业1</title>
+</head>
+<body>
+    <h3>点击以下图片查看效果</h3>
+    <div id="warp">
+        <ul>
+            <li>
+                <img src="01.png" alt="">
+                <div>
+                    <img src="01.png" alt="">
+                </div>
+            </li>
+            <li>
+                <img src="02.png" alt="">
+                <div>
+                    <img src="02.png" alt="">
+                </div>
+            </li>
+            <li>
+                <img src="03.png" alt="">
+                <div>
+                    <img src="03.png" alt="">
+                </div>
+            </li>
+            <li>
+                <img src="04.png" alt="">
+                <div>
+                    <img src="04.png" alt="">
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        //获取对象，点击显示大图
+        var goudan=document.getElementsByTagName("li");
+        var oshow=goudan[0].getElementsByTagName("div");
+        var xshow=goudan[1].getElementsByTagName("div");
+        var cshow=goudan[2].getElementsByTagName("div");
+        var vshow=goudan[3].getElementsByTagName("div");
+        goudan[0].onclick=function (ev) {
+            oshow[0].style.display="block";
+        }
+        goudan[0].onmouseout=function (ev) {
+            oshow[0].style.display="none";
+        }
+        goudan[1].onclick=function (ev) {
+           xshow[0].style.display="block";
+        }
+        goudan[1].onmouseout=function (ev) {
+            xshow[0].style.display="none";
+        }
+        goudan[2].onclick=function (ev) {
+            cshow[0].style.display="block";
+        }
+        goudan[2].onmouseout=function (ev) {
+            cshow[0].style.display="none";
+        }
+        goudan[3].onclick=function (ev) {
+            vshow[0].style.display="block";
+        }
+        goudan[3].onmouseout=function (ev) {
+            vshow[0].style.display="none";
+        }
+    </script>
+</body>
+</html>
